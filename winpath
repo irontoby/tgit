@@ -1,0 +1,12 @@
+#!/bin/perl
+
+use Cwd qw(cwd abs_path);
+
+# Converts Bash path to corresponding Windows path
+$path = shift || cwd();
+$path = abs_path($path);
+
+$path =~ s!^/([\w])/!$1:/!;
+$path =~ s!/!\\!g;
+
+print "$path\n";
