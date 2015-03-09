@@ -19,4 +19,4 @@ else
   WPATH=`winpath`
 fi
 
-wscript "$TGIT_DIR\NoShell.vbs" "$TGIT_DIR\tgit.bat" $CMD /path:"$WPATH" $@ &
+wscript "$TGIT_DIR\NoShell.vbs" "$TGIT_DIR\tgit.bat" $CMD "$WPATH" $@ &
